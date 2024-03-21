@@ -2,7 +2,7 @@ import { createUser, getUserByEmail } from '../db/users';
 import express, { NextFunction } from 'express';
 import { authentication, random } from '../helpers';
 
-export const login = async (req: express.Request, res: express.Response, next: NextFunction) => {
+export const login = async (req: express.Request, res: express.Response) => {
     try {
         const { email, password } = req.body;
 
