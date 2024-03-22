@@ -27,7 +27,7 @@ export const login = async (req: express.Request, res: express.Response) => {
 
         await user.save();
 
-        res.cookie('CARLOS-AUTH', user.authentication.sessiontToken, { domain: 'localhost', path: '/' });
+        res.cookie('OLIVEIRA-AUTH', user.authentication.sessiontToken, { domain: 'localhost', path: '/' });
 
         return res.status(200).json(user).end();
     } catch (error) {
