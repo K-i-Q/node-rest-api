@@ -9,7 +9,6 @@ export const isOwner = async (req: express.Request, res: express.Response, next:
         const { id } = req.params;
 
         const currentUserId = get(req, 'identity._id') as string;
-        console.log({req})
         if (!currentUserId) {
             return res.sendStatus(403);
         }
@@ -38,7 +37,6 @@ export const isAuthenticated = async (req: express.Request, res: express.Respons
         if (!existingUser) {
             return res.sendStatus(403);
         }
-
         merge(req, { identity: existingUser });
 
         return next();
