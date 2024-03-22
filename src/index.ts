@@ -21,10 +21,9 @@ const server = http.createServer(app);
 
 server.listen(8080, () => {
     console.log('Server running on port hhtp://localhost:8080/');
-})
+});
 
 const MONGO_URL = 'mongodb+srv://pixdokiq:pixd0kiq@cluster0.6ej70vr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
-// const MONGO_URL = 'mongodb+srv://pixdokiq:pixd0kiq@cluster0.6ej70vr.mongodb.net/';
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGO_URL);
